@@ -1,0 +1,18 @@
+{
+  "root": "packages/a",
+  "sourceRoot": "packages/a/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["dist"],
+      "options": {
+        "cwd": "packages/a",
+        "commands": [
+          "rm -fr dist",
+          "mkdir dist",
+          "cp src/index.js dist/index.js"
+        ]
+      }
+    }
+  }
+}
